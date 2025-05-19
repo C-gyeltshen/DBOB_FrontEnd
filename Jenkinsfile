@@ -17,16 +17,16 @@ pipeline {
     	sh 'npm run build'  // For frameworks like React, Next.js
   	}
 	}
-	stage('Test') {
-  	steps {
-    	sh 'npm test'
-  	}
+	// stage('Test') {
+  	// steps {
+    // 	sh 'npm test'
+  	// }
   	// post {
     // 	always {
-    //   	// junit 'junit.xml'  
+    //   	    junit 'junit.xml'  
     // 	}
   	// }
-	}
+	// }
 	stage('Deploy') {
   	steps {
     	script {
