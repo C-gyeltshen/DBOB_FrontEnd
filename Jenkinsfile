@@ -23,7 +23,7 @@ pipeline {
   	}
   	post {
     	always {
-      	junit 'junit.xml'  // Test reports (if using jest-junit)
+      	// junit 'junit.xml'  
     	}
   	}
 	}
