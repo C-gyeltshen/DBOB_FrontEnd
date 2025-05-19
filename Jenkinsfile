@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools {
-	nodejs 'NodeJS'  
+	nodejs 'NodeJS-20.x'  // Matches the name in Global Tool Configuration
   }
   environment {
 	CI = 'true'
@@ -23,7 +23,7 @@ pipeline {
   	}
   	post {
     	always {
-      	    junit 'junit.xml'  
+      	junit 'junit.xml'  // Test reports (if using jest-junit)
     	}
   	}
 	}
@@ -40,4 +40,3 @@ pipeline {
 	}
   }
  }
-
