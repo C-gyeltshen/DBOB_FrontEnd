@@ -32,7 +32,7 @@ export default function RegisterPage() {
         user_name:'',
     });
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = async (event: { preventDefault: () => void; }) => {
 
         event.preventDefault();
         
@@ -72,7 +72,7 @@ export default function RegisterPage() {
         }
     };
 
-    const handleInputChange = (event) => {
+    const handleInputChange = (event: { target: { name: any; value: any; }; }) => {
         const { name, value } = event.target;
         setFormData(prevState => ({
             ...prevState,
