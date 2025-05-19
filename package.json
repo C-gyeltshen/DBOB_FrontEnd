@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "deploy:prod": "your-production-deployment-command",
-    "deploy:stage": "your-staging-deployment-command",
+    "deploy:prod": "docker build -t banking-frontend:prod . && docker tag banking-frontend:prod ${DOCKER_REGISTRY:-localhost:5000}/banking-frontend:prod && docker push ${DOCKER_REGISTRY:-localhost:5000}/banking-frontend:prod",
+    "deploy:stage": "docker build -t banking-frontend:stage . && docker tag banking-frontend:stage ${DOCKER_REGISTRY:-localhost:5000}/banking-frontend:stage && docker push ${DOCKER_REGISTRY:-localhost:5000}/banking-frontend:stage",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
